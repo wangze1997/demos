@@ -1,0 +1,35 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            div{
+                width:100px;
+                height:100px;
+                background-color: orange;
+                position: absolute;
+                left:0px;
+            }
+        </style>
+</head>
+<body>
+        <div></div>
+        <script>
+            var oDiv = document.getElementsByTagName("div")[0]
+            oDiv.onmousedown = function(e){
+                var oLeft = parseInt(e.pageX) - this.offsetLeft,
+                    oTop = parseInt(e.pageY) - this.offsetTop;
+                document.body.onmousemove = function(e){
+                    oDiv.style.left = parseInt(e.pageX) - oLeft + "px"
+                    oDiv.style.top = parseInt(e.pageY) - oTop + "px"
+                }
+                document.body.onmouseup = function(e){
+                    document.body.onmousemove = null;
+                }
+            }
+        </script>
+</body>
+</html>

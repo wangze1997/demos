@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:100px;
+            height:100px;
+            background-color: orange;
+            position: absolute;
+            left:0px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var oDiv = document.getElementsByTagName("div")[0]
+        function move(dom,length){
+            var speed = 0;
+            var timer = setInterval(function(){
+                speed = Math.ceil((length - dom.offsetLeft)/7); 
+                dom.style.left = dom.offsetLeft + speed + "px";
+                console.log(1)
+                if(parseInt(dom.style.left) == length){
+                    clearInterval(timer)
+                }
+            },30)
+        }
+        move(oDiv,500)
+    </script>
+</body>
+</html>
