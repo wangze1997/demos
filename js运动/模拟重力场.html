@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    <div style="width:100px;height:100px;background-color:#f30;position:absolute;left:0px;top:0px;"></div>
+    <script>
+        var div = document.getElementsByTagName("div")[0];
+        div.onclick = function (e){
+            startMove(this);
+        }
+        function startMove(dom){
+            var ispeedX = 6,
+                ispeedY = 6,
+                g = 2;
+            dom.timer = setInterval(function(){
+                ispeedY = ispeedY + g
+                var newLeft = dom.offsetLeft + ispeedX;
+                var newTop = dom.offsetTop + ispeedY;
+
+                if(newTop > document.documentElement.clientHeight - dom.offsetHeight){
+                    ispeedY = -ispeedY
+                    newTop = document.documentElement.clientHeight - dom.offsetHeight
+                    ispeedY *= 0.8;
+                    ispeedX *= 0.8;
+                }
+                if(dom.offsetTop < 0){
+                    ispeedY = -ispeedY;
+                    newTop = 0;
+                    ispeedY *= 0.8;
+                    ispeedX *= 0.8;
+                }
+                if(newLeft > document.documentElement.clientWidth - dom.offsetWidth){
+                    ispeedX = -ispeedX
+                    newLeft = document.documentElement.clientWidth - dom.offsetWidth
+                    ispeedY *= 0.8;
+                    ispeedX *= 0.8;
+                }
+                if(dom.offsetLeft < 0){
+                    ispeedX = -ispeedX;
+                    newLeft = 0;
+                    ispeedY *= 0.8;
+                    ispeedX *= 0.8;
+                }
+                if(Math.abs(ispeedX) < 1){
+                    ispeedX = 0
+                }
+                if(Math.abs(ispeedY) < 1){
+                    ispeedY = 0
+                }
+                if(ispeedX == 0 && ispeedY == 0 && newTop == document.documentElement.clientWidth){
+                    clearInterval(dom.timer)
+                }else{
+                    dom.style.left = newLeft + "px";
+                    dom.style.top = newTop + "px" 
+                } 
+            },35);
+        }
+    </script>
+</body>
+</html>
