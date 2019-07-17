@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* html,body{
+            height:100%; 
+            margin:0px;
+            overflow: hidden;
+            position: relative;
+        }
+        .wrapper{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+        .wrapper .section{
+            position: relative;
+            width:100%;
+            height:100%;
+            color:#000;
+            font-size: 40px;
+        }
+        .wrapper .section .slider{
+            height: 100%;
+            float:left;
+        }
+        .sliderwrapper{
+            position: absolute;
+            left: 0px;
+            top:0px;
+            height: 100%;
+        } */
+        .section{
+            font-size:40px;
+            font-weight: 500;
+            color:blueviolet;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!--定位是相对与内容区域而言的-->
+    <!-- <dcotype>模式下 body设置height:100%不管用，必须将html设置为100%-->
+    <div class="wrapper">
+        <div class="section">第一页</div>
+        <div class="section">第二页</div>
+        <div class="section">
+            <div class="slider">第三页 第一屏</div>
+            <div class="slider">第三页 第二屏</div>
+            <div class="slider">第三页 第三屏</div>
+        </div>
+        <div class="section">第四页</div>
+    </div>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/myFullpage.js"></script>
+    <script>
+        $(".wrapper").myFullpage({
+            colorsArray:["url(images/1.jpg)","url(images/2.jpg)","url(images/3.jpg)","url(images/4.jpg)"],
+            onLeave:function(index){
+
+            },
+            afterLode:function(index){
+                
+            }})
+    </script>
+</body>
+</html>

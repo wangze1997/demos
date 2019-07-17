@@ -24,10 +24,10 @@
             var timer = setInterval(function(){
                 speed = Math.ceil((length - dom.offsetLeft)/7); 
                 dom.style.left = dom.offsetLeft + speed + "px";
-                console.log(1)
                 if(parseInt(dom.style.left) == length){
                     clearInterval(timer)
                 }
+                console.log(1)
             },30)
         }
         move(oDiv,500)
