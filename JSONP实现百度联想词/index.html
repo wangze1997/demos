@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            list-style: none;
+        }
+        .wrapper{
+            width:350px;
+            margin:100px auto 0;
+        }
+        input{
+            width:350px;
+            height:35px;
+            font-size:24px;
+            border:2px solid red;
+            outline: 0;
+        }
+        ul{
+            width:100%;
+            margin:0 auto;
+            border:1px solid #ccc;
+            border-top:0px;
+            display: none;
+        }
+        li{
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="text">
+        <ul>
+        </ul>
+    </div>  
+
+    <script>
+        // 防抖操作
+        function debouce(fn,delay,immdiate){
+            var timer = null;
+            return function(){
+                var _self = this,
+                    _args = arguments;
+                clearTimeout(timer)
+                if(immdiate){
+                    timeout = !timer
+                    timer = setTimeout(function(){
+                        timer = null;
+                    },delay)
+                    if(timeout) fn.apply()
+                }else{
+                    tiemr = setTimeout(function(){
+                        fn.apply(_self,_args)
+                    },delay)
+                }
+
+            }
+        }
+        function fn(){
+            var script = document.createElement("script");
+            script.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy?wd=" + this.value +"&cb=callback";
+            document.body.appendChild(script);
+        }
+        var input = document.getElementsByTagName("input")[0];
+        var oUl = document.getElementsByTagName("ul")[0]
+        input.oninput = debouce(fn,1500)
+        function callback(res){
+            var data = res.s;
+            var str = ""
+            data.forEach(function(item){
+                str += "<li>" + item + "</li>"
+            })
+            console.log()
+            if(!str){
+                oUl.style.display = "none"
+            }else{
+                oUl.style.display = "block"
+                oUl.innerHTML = str;
+            }
+        }
+    </script>
+</body>
+</html>
