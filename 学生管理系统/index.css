@@ -170,11 +170,9 @@ header div img{
     overflow: auto;
 }
 .content .content-right .modal{
-     display: none;/* 控制遮罩层 */
+    display: none;/* 控制遮罩层 */
     box-sizing: border-box;
     padding:20px;
-    width:400px;
-    height:400px;
 }
 .content .content-right .modal-mask{
     position: fixed;
