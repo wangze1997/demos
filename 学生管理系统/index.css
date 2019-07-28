@@ -1,0 +1,198 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+html,body{
+    height:100%;
+}
+header{
+    height:70px;
+}
+header div{
+    box-sizing: border-box;
+    height: 100%;
+    background: #354457;
+    line-height: 50px;
+    padding:10px;
+    color:#fff;
+}
+header div img{
+    float:left;
+    width:30px;
+    height: 30px;
+    margin-top:10px;
+    margin-right: 5px;
+}
+.content{
+    height:calc(100% - 70px);
+    min-width: 700px;
+}
+.content .content-left{
+    float:left;
+    line-height: 40px;
+    width:200px;
+    height: 100%;
+    background-color: #4d5e70;
+    color:#b3bcc5;;
+}
+.content .content-left dl{
+    padding-top:10px;
+}
+.content .content-left dt{
+    padding-left:10px;
+}
+.content .content-left dd{
+    padding-left:20px;
+    cursor: pointer;
+}
+.content .content-left .active{
+    background-color: #ddd;
+    color:#354457;
+}
+.content .content-left dd:not(.active):hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #354457;
+}
+.content .content-right{
+    float:left;
+    min-width: 500px;
+    width: calc(100% - 200px);
+    height: 100%;
+    background-color: #eee;
+}
+.content .content-right .student-list{
+    width:100%;
+    height:100%;
+    display: none;
+}
+.content .content-right .student-list .page{
+    text-align: center;
+    height:40px;
+}
+.content .content-right .student-list .page span{
+    margin:10px 7px 0px;
+    width:60px;
+    height:30px;
+    display: inline-block;
+    line-height: 30px;
+    background-color:#d9534f;
+    border-radius: 8px;
+    cursor: pointer;
+    color:#fff;
+}
+.content .content-right .student-list .search{
+    position: relative;
+    height:50px;
+}
+.content .content-right .student-list .search input{
+    width:250px;
+    height: 30px;
+    margin:8px  0px 2px 10px;
+    outline: 0;
+    font-size: 17px;
+}
+.content .content-right .student-list .search button{
+    position: absolute;
+    height:34px;
+    top:8px;
+    width:70px;
+    font-size:17px;
+    color:rebeccapurple;
+} 
+.content .content-right table{
+    line-height: 32px;
+    width:100%;
+}
+.content .content-right table th{
+    background-color: #e3e8ee;
+    color:#4d5e70;
+}
+.content .content-right table td{
+    text-align: center;
+    background: #fff;
+}
+.content .content-right table span{
+    line-height: 17px;
+    font-size:15px;
+    color:#fff;
+    display: inline-block;
+    padding:5px 10px;
+    margin:3px 4px 3px 0px;
+    cursor: pointer;
+}
+.content .content-right table .del{
+    background: #d9534f;
+}
+.content .content-right table .edit{
+    background: #5cb85c;;
+}
+.content .add-student{
+    display: none;
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.content.content.content .content-active{
+    display: block;
+}
+.content .add-student form{
+    width:300px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+.content .add-student form div,
+.content .content-right .modal-content form div{
+    margin:10px 0px;
+}
+.content .add-student form span,
+.content .content-right .modal-content form span{
+    display: inline-block;
+    width:50px;
+    text-align: right;
+    margin-right:10px;
+} 
+.content .add-student form [type=reset],
+.content .add-student form [type=submit],
+.content .content-right .modal-content form [type=reset],
+.content .content-right .modal-content form [type=submit]
+{
+    width:80px;
+    line-height: 30px;
+    height:30px;
+}
+.content .add-student form [type=reset],
+.content .content-right .modal-content form [type=reset]{
+    margin-left:70px;
+}
+.content .content-right{
+    overflow: auto;
+}
+.content .content-right .modal{
+     display: none;/* 控制遮罩层 */
+    box-sizing: border-box;
+    padding:20px;
+    width:400px;
+    height:400px;
+}
+.content .content-right .modal-mask{
+    position: fixed;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.3);
+}
+.content .content-right .modal-content{
+    padding:10px;
+    position: absolute;
+    left:calc(50% - 200px);
+    top:calc(50% - 200px);
+    background: #fff;
+    box-shadow: 0 0 10px #424242;
+}
+.content .content-right .modal-content form{
+    width:300px;
+    margin:20px 35px;
+}

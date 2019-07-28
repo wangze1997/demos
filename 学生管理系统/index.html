@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理系统</title>
+    <link rel="shortcut icon" href="./images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="images/logo.ico" alt="">
+            <span>学生管理系统</span>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content-left">
+            <dl>
+                <dt>学生管理</dt>
+                <dd class="active" data-id="student-list">学生列表</dd>
+                <dd data-id="add-student">新增学生</dd>
+            </dl>
+        </div>
+        <div class="content-right">
+            <div class="student-list content-active">
+                <div class="search">
+                        <input type="text" class="search-input"> <button class="search-botton">搜索</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>学号</th>
+                            <th>年龄</th>
+                            <th>性别</th>
+                            <th>姓名</th>
+                            <th>邮箱</th>
+                            <th>联系方式</th>
+                            <th>住址</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table">
+                        <tr>
+                            <td>00001</td>
+                            <td>20</td>
+                            <td>男</td>
+                            <td>源子邕</td>
+                            <td>18482998323@163.com</td>
+                            <td>123212112</td>
+                            <td>北魏清河镇</td>
+                            <td>
+                                <span class="delete">删除</span>
+                                <span class="edit">编辑</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="page">
+                        <span class="prevPage">上一页</span><span class="nextPage">下一页</span>
+                    </div>
+                <div class="modal">
+                    <div class="modal-mask"></div>
+                    <div class="modal-content">
+                            <h3>编辑信息</h3>
+                            <form action="" id="edit-student-form">
+                                    <div><label><span> 姓名 </span>    <input type="text" name="name"></label></div>
+                                    <div><label><span>性别</span>  <input type="radio" checked name="sex" value="0">男 <input type="radio" name="sex" value="1">女</label></div>
+                                    <div><label><span>学号</span> <input type="text" name="sNo"></label> </div>
+                                    <div><label><span>邮箱</span>  <input type="email" name="email"></label></div>
+                                    <div><label><span>出生年</span>  <input type="text" name="birth"></label></div>
+                                    <div><label><span>手机号</span>  <input type="text" name="phone"></label></div>
+                                    <div><label><span>住址</span> <input type="text" name="address"></label> </div>
+                                    <div><input type="reset"value="重置"> <input type="submit"value="提交"></div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <div class="add-student">
+                <form action="" id="add-student-form">
+                    <div><label><span> 姓名 </span>    <input type="text" name="name"></label></div>
+                    <div><label><span>性别</span>  <input type="radio" checked name="sex" value="0">男 <input type="radio" name="sex" value="1">女</label></div>
+                    <div><label><span>学号</span> <input type="text" name="sNo"></label> </div>
+                    <div><label><span>邮箱</span>  <input type="email" name="email"></label></div>
+                    <div><label><span>出生年</span>  <input type="text" name="birth"></label></div>
+                    <div><label><span>手机号</span>  <input type="text" name="phone"></label></div>
+                    <div><label><span>住址</span> <input type="text" name="address"></label> </div>
+                    <div><input type="reset"value="重置"> <input type="submit"value="提交"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
