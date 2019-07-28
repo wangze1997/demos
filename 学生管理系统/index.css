@@ -186,7 +186,7 @@ header div img{
 }
 .content .content-right .modal-content{
     padding:10px;
-    position: absolute;
+    position: fixed;
     left:calc(50% - 200px);
     top:calc(50% - 200px);
     background: #fff;
