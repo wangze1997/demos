@@ -1,0 +1,149 @@
+.banner-top{
+    background: #021523;
+}
+.banner-top .navgation .navbar-default{
+    background-color:#021523;
+    border:none;
+    color:#fff;
+}
+.banner-top .navgation .navbar-default .navbar-header h1{
+    display: inline-block;
+}
+.banner-top .navgation .navbar-default .navbar-header .glyphicon-camera{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.banner-top .navgation .navbar-default .navbar-header div{
+    font-size:18px;
+}
+.banner-top .navgation .navbar-collapse .navbar-right li a{
+    font-size:20px;
+    font-weight: 700;
+    color:#fff;
+}
+.banner-top .navgation .navbar-collapse .navbar-right li a:hover{
+    color: #ef5734;
+}
+.about .container .row img{
+    width:100%;
+}
+/* row竟然设置了左右margin为-15px，不深入去想，他可以抵消container的padding，所以可以不用考虑container与row带来的影响*/
+.about .container .row{
+    /* margin:0px; */
+}
+.about .container .row .about-top-agile-its{
+    padding:15px;
+}
+.about .container .row .about-top-agile-its h2{
+    font-weight: 700;
+}
+.about .container .row .about-top-agile-its .space{
+    color:#33cc99;
+    letter-spacing: 4px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #ccc;
+}
+.about .container .row .about-top-agile-its .text{
+    color:#838383;
+}
+.about .container .row .about-top-agile-its em{
+    color:#ef5734;
+}
+.protos .agileits_heading_section{
+    margin:25px 0px 20px 0px;
+}
+.protos .agileits_heading_section h3{
+    text-align: center;
+    font-size: 30px;
+    word-spacing: 5px;
+    font-weight: 700;
+}
+/* 不用考虑container的padding与row的margin带来的影响，不知道他内部是怎么玩的 */
+.protos .container-fluid{
+    /* padding:0px; */
+}
+.protos .container-fluid .row{
+    /* margin:0px; */
+}
+.protos .container-fluid .row div{
+    padding:0px;
+}
+.protos .container-fluid .row div img{
+    cursor: pointer;
+    width:100%;
+}
+.protos .container-fluid .row div:hover div{
+    transform: scale(1);
+    
+}
+.protos .container-fluid .row .textbox{
+    transition: transform .6s ease;
+    transform: scale(0);
+    background-color: rgba(51, 204, 153, 0.83);
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+}
+.protos .container-fluid .row .textbox p{
+    width:100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top:calc(50% - 25px);
+    font-size: 30px;
+    color:#fff;
+    background: rgba(0, 0, 0, 0.575);
+}
+
+.footer .container-fluid{
+    background-image: url(../images/banner.jpg);
+    height: 400px;
+    /* 注意这里。。 */
+    background-size:cover;
+    background-position: 50% 50%;
+}
+.footer .container-fluid .cam{
+    text-align: center;
+    color:#fff;
+    font-size: 50px;
+    margin-top:100px;
+    cursor: pointer;
+}
+.footer .container-fluid .agileits_social_media div{
+    text-align: center;
+}
+.footer .container-fluid .agileits_social_media a{
+    display: inline-block;
+    width:36px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    font-size:15px;
+    background:#fff;
+    margin:10px 18px;
+}
+.footer .container-fluid .agileits_social_media a:hover{
+    opacity: 0.7;
+}
+.footer .container-fluid .agileits_social_media a:nth-of-type(1){
+    color:#ef5734;
+}
+.footer .container-fluid .agileits_social_media a:nth-of-type(2){
+    color:skyblue;
+}
+.footer .container-fluid .agileits_social_media a:nth-of-type(3){
+    color:violet;
+}
+.footer .container-fluid .agileits_social_media a:nth-of-type(4){
+    color:#337ab7;
+}
+.footer .container-fluid .copy-right{
+    margin-top:20px;
+    color:#fff;
+    text-align: center;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
