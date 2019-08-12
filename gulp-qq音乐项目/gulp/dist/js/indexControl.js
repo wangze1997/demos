@@ -1,0 +1,1 @@
+"use strict";!function(n,i){function e(){this.index=0}e.prototype={prev:function(){return this.index--,-1==this.index&&(this.index=len-1),this.index},next:function(){return this.index++,this.index==len&&(this.index=0),this.index}},i.ContorlIndex=new e}(window.$,window.player||(window.player={}));

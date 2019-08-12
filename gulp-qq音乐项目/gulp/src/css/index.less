@@ -1,0 +1,139 @@
+
+*{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+    body{
+        font-size: 12px;
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        .wrapper{
+            width:100vw;
+            height: 100vh;
+            position: relative;
+            padding-top:60px;
+            box-sizing: border-box;
+            background-color:rgba(0, 0, 0,0.2);
+            .song-img{
+                position: relative;
+                width:70%;
+                height: 0px;
+                // 移动端设置padding左右上下，都是相对于父级宽度。
+                padding-top: 70%;
+                margin:0 auto;
+                .img-box{
+                    position: absolute;
+                    background: #424242;
+                    top:0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    display: flex;
+                    border-radius: 50%;
+                    img{
+                        width:75%;
+                        height: 75%;
+                        border-radius: 50%;
+                        margin:auto;
+                    }
+                }
+            }
+            .song-info{
+                margin-top:20px;
+                width:100%;
+                text-align: center;
+                height: 126px;
+                color:#fff;
+                .song-name{
+                    font-size: 24px;
+                    line-height: 36px;
+                    margin-bottom: 8px;
+                }
+                .singer-name{
+                    font-size:15px;
+                    color:#fefefe;
+                }
+                .album-name{
+                    font-size: 15px;
+                    margin-top:7px;
+                    color:#fefefe;
+                }
+            }
+            .pro{
+                display: flex;
+                color:#fff;
+                .cur-time,
+                .all-time{
+                    width:60px;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 60px;
+                    font-size: 18px;
+                }
+                .pro-wrap{
+                    flex:1;
+                    height:60px;
+                    position: relative;
+                    .pro-top{
+                        height: 1px;
+                        width:100%;
+                        position: absolute;
+                        top:29px;
+                        background: #fff;
+                    }
+                    .pro-radius{
+                        position: absolute;
+                        top:26px;
+                        width:8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: #fff;
+                    }
+                    .pro-fill{
+                        height: 1px;
+                        width:0%;
+                        position: absolute;
+                        top:29px;
+                        background: sandybrown;
+                    }
+                }
+            }
+            .control{
+                width:100%;
+                height: 60px;
+                position: absolute;
+                bottom: 0px;
+                background-color:rgba(0, 0, 0, 0.55);
+                .btn{
+                    float: left;
+                    width:20vw;
+                    height: 100%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 23px;
+                }
+                .like{
+                    background-image: url(../images/icon-like.png);
+                    &.liking{
+                        background-image: url(../images/icon-like-solid.png);
+                    }
+                }
+                .prev{
+                    background-image: url(../images/icon-prev.png);
+                }
+                .play{
+                    background-image: url(../images/icon-play.png);
+                    &.playing{
+                        background-image: url(../images/icon-pause.png)
+                    }
+                }
+                .next{
+                    background-image: url(../images/icon-next.png);
+                }
+                .list{
+                    background-image: url(../images/icon-list.png);
+                }
+            }
+        }
+    }
+}
