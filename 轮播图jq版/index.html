@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <div class="wrapper"></div>
+    <div class="silderWrap"></div>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(".wrapper").swiper({
+            width:370,
+            height:300,
+            imgList:[{
+                href:"#2",
+                src:"./images/2.png"
+            },{
+                href:"#3",
+                src:"./images/3.png"
+            },{
+                href:"#4",
+                src:"./images/4.png"
+            }],
+            showBtn:true,
+            animate:"animate",
+            changeImg:true
+        })
+        $(".silderWrap").swiper({
+            width:300,
+            height:240,
+            imgList:[{
+                href:"#1",
+                src:"./images/1.png"
+            },{
+                href:"#2",
+                src:"./images/2.png"
+            },{
+                href:"#3",
+                src:"./images/3.png"
+            },{
+                href:"#4",
+                src:"./images/4.png"
+            }],
+            showBtn:true,
+            animate:"fade",
+            changeImg:true
+        })
+    </script>
+</body>
+</html>
