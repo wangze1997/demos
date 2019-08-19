@@ -9,9 +9,16 @@ function renderHolderDom(res){
         str += "<li><a href='#'><span class='name'>"+ item[0] +"</span><span class='num'>" + "约" +parseInt(item[1]) + "个商品" + "</span></a></li>"
     })
     serachBox.find(".wrapper").html(ul.html(str));
-    $(".x .main .form .serachbox").css({
-        display:"block"
-    })
+    if(res.result.length){
+        $(".x .main .form .serachbox").css({
+            display:"block"
+        })
+    }else{
+        $(".x .main .form .serachbox").css({
+            display:"none"
+        })
+    }
+    console.log(res.result)
 }
 $(".x .main .form").on("mouseleave",function(){
     $(".x .main .form .serachbox").css({
