@@ -62,7 +62,7 @@ function getMinLi() {
 getJSON("get", "http://127.0.0.1:3000/data", "size=10&page= +" + page + "+&user=caiwenji").then(function (res) {
     randerDom(res);
 });
-window.onscroll = function () {
+function fn() {
     var client = document.documentElement.clientHeight
     var scrollTop = document.documentElement.scrollTop
     var maxHeight = document.documentElement.offsetHeight;
@@ -77,3 +77,14 @@ window.onscroll = function () {
         });
     }
 }
+function throttle (fn,delay){
+    var timer = null;
+    return function (){
+        if(timer) return false;
+        timer = setTimeout(() => {
+            fn.apply(this,arguments);
+            timer = null;
+        },delay)
+    }
+}
+window.onscroll = throttle(fn,100);
