@@ -1,0 +1,124 @@
+.offer-container{
+    margin: 40px 0px 0px 0px;
+    overflow: hidden;
+    .index-nav-container{
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #fff;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        .nav-item.mf-shang-hei-regular{
+            font-size: 18px;
+            margin-left: 13px;
+            margin-right: 10px;
+        }
+        .nav-item{
+            float: left;
+            padding: 0 5px;
+            position: relative;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+    }
+    .cheap-area.clearfix{
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        padding: 6px 10px 10px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        a{
+            display: block;
+            width: 213px;
+            height: 270px;
+            padding: 10px;
+            float: left;
+            background-color: #fff;
+            transition: background-color 500ms;
+            .cheap-img{
+
+            }
+            &:hover{
+                background-color:#eee;
+            }
+            .poi-info{
+                text-align: left;
+                .title{
+                    font-size: 16px;
+                    color: #222;
+                    max-height: 22px;
+                    line-height: 22px;
+                    margin-bottom: 6px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    cursor: pointer;
+                }
+                .sub-title{
+                    font-size: 12px;
+                    color: #999;
+                    line-height: 17px;
+                    margin-bottom: 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .tags-wrapper.clearfix{
+                    font-size: 12px;
+                    color: #999;
+                    height: 20px;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+                    .tag{
+                        height: 18px;
+                        line-height: 18px;
+                        text-align: center;
+                        border: 1px solid #d8d8d8;
+                        border-radius: 2px;
+                        float: left;
+                        margin-right: 10px;
+                        margin-bottom: 5px;
+                        padding: 0 3px;
+                    }
+                }
+                .price-info{
+                    height: 27px;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+                        .price-symbol.numfont{
+                            font-size: 14px;
+                            color: #FF6600;
+                            font-weight: 500;
+                    
+                        }
+                        .current-price.numfont{
+                            font-size: 22px;
+                            color: #FF6600;
+                            margin-right: 6px;
+                            letter-spacing: -0.8px;
+                        }
+                        .old-price{
+                            font-size: 12px;
+                            color: #999;
+                            text-decoration: line-through;
+                        }
+                        .sold{
+                            font-size: 12px;
+                            color: #999;
+                            float: right;
+                            margin-top: 10px;
+                        }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@import "./topbar.scss";
+@import "./search.scss";
+body{
+ background-color:#f8f8f8;
+}
+header.el-header{
+    padding:0px;
+}
+.header.m-header{
+  width:100%!important;
+}
+.m-header{
+  >.el-row:nth-child(1){
+    width: 1190px !important;
+    margin: 0 auto !important;
+    z-index: 9999;
+    height: 40px;
+    line-height: 40px;
+  }
+  >.el-row:nth-child(2){
+    background-color: #fff;
+    .search-bar{
+      width: 1190px;
+      height:122px;
+      margin: 0 auto;
+    }
+    padding-bottom: 35px;
+  }
+  >.el-main {
+    overflow: unset;
+  }
+  a {
+    text-decoration: none;
+  }
+}

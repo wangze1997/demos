@@ -1,0 +1,170 @@
+.recommend {
+    .recommend-container{
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .index-nav-container{
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        box-sizing: border-box;
+        font-size: 14px;
+        color: #fff;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    div>ul.clearfix{
+        .title{
+            font-size: 18px;
+            margin-left: 13px;
+            margin-right: 10px;
+            float: left;
+            padding: 0 5px;
+            position: relative;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: "MFShangHei-Regular" !important;
+        }
+    }
+    .recommend-list{
+        background-color: #fff;
+        border: 1px solid #E5E5E5;
+        border-top: 0;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        max-height: 758px;
+        padding: 10px 10px 20px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: hidden;
+        text-align: left;
+        -webkit-font-smoothing: antialiased;
+        font-family: "-apple-system","BlinkMacSystemFont","Roboto","Helvetica Neue","MIcrosoft YaHei",sans-serif !important;
+        a{
+            display: inline-block;
+            width: 20%;
+            box-sizing: border-box;
+            vertical-align: middle;
+            text-decoration: none;
+            transition:all .3s;
+            &:hover{
+                background-color:#eee;
+            }
+            .card-container{
+                padding: 10px;
+                .recommend-card-wrapper{
+                    width: 100%;
+                    box-sizing: border-box;
+                    .img-box{
+                        height: 0;
+                        width: 100%;
+                        padding-bottom: 56.25%;
+                        background-color: #f4f4f4;
+                        background-image: url(//p0.meituan.net/travelcube/214b841….png);
+                        background-size: cover;
+                        background-position: 50% 50%;
+                        border-radius: 4px;
+                        overflow: hidden;
+                    }
+                    .info-box{
+                        .title.aligned{
+                            font-size: 16px;
+                            line-height: 22px;
+                            width: 100%;
+                            height: 22px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            color:#424242;
+                        }
+                        .score-line.aligned{
+                            height: 24px;
+                            .score{
+                                display: inline-block;
+                                .rate-stars{
+                                    display: inline-block;
+                                    width: 84px;
+                                    height: 24px;
+                                    position: relative;
+                                    .rate-stars-ul.rate-stars-dark{
+                                        color: #c3c3c3;
+                                        list-style: none;
+                                        padding: 0;
+                                        text-align: left;
+                                        margin: 3px 0;
+                                        white-space: nowrap;
+                                        li{
+                                            display: inline-block;
+                                             padding: 0px 2px;
+                                            
+                                        }
+                                    }
+                                    .rate-stars-ul.rate-stars-light{
+                                        color: #FF9900;
+                                        position: absolute;
+                                        top: 0px;
+                                        overflow: hidden;
+                                        list-style: none;
+                                        padding: 0;
+                                        text-align: left;
+                                        margin: 3px 0;
+                                        white-space: nowrap;
+                                        li{
+                                            display: inline-block;
+                                            padding: 0px 2px;
+                                        }
+                                    }
+                                }
+                            }
+                            .comment-number{
+                                display: inline-block;
+                                font-size: 12px;
+                                color: #999;
+                                height: 24px;
+                                line-height: 24px;
+                                margin-left: 20px;
+                            }
+                            
+                        }
+                        .desc-line.aligned{
+                            height: 18px;
+                            .desc{
+                                font-size: 12px;
+                                color: #999999;
+                                width: 100%;
+                                height: 18px;
+                                line-height: 18px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                margin-top: 4px;
+                            }
+                        }
+                        .bottom-line.aligned{
+                            height: 28px;
+                            position: relative;
+                            .price-box{
+                                color: #FF6600;
+                                .yuan{
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                }
+                                .price-number{
+                                    font-family: "numbers" !important;
+                                    letter-spacing: -0.5px;
+                                    font-size: 22px;
+                                }
+                                .price-desc{
+                                    font-size: 12px;
+                                    margin-left: 4px;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
